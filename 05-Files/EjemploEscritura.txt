@@ -1,0 +1,5 @@
+Podemos escribir en un archivo
+La hora actual es: 23:56:14
+Podemos escribir en un archivo
+La hora actual es: 23:56:39
+Añadiendo nuevo contenido
