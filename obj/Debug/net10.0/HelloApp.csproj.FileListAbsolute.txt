@@ -12,3 +12,4 @@
 /Users/andres/Documents/Cursos/csharp2/HelloApp/obj/Debug/net10.0/HelloApp.pdb
 /Users/andres/Documents/Cursos/csharp2/HelloApp/obj/Debug/net10.0/HelloApp.genruntimeconfig.cache
 /Users/andres/Documents/Cursos/csharp2/HelloApp/obj/Debug/net10.0/ref/HelloApp.dll
+/Users/andres/Documents/Cursos/csharp2/HelloApp/obj/Debug/net10.0/HelloApp.sourcelink.json
