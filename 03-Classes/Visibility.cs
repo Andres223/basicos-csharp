@@ -1,10 +1,11 @@
 namespace HelloApp;
 
-partial class Visibility
+partial class Program
 {
     static void Visibility()
-    {
-        
+    {   
+        Sith sith = new Sith();
+        sith.ShowProtected();
     }
 }
 
@@ -14,7 +15,7 @@ class Jedi
     private string PrivateField = "Mis pensamientos más profundos son privados";
     protected string ProtectedField = "El lado oscuro no debe conocer mis secretos";
     public int PowerLevel { get; set; }
-    public string LightsaberColor { get; set; }
+    public string? LightsaberColor { get; set; }
 
     public void UseForce()
     {
@@ -29,6 +30,12 @@ class Jedi
     protected void Train()
     {
         Console.WriteLine("Estoy entrenando para convertirme en el mejor jedi.");
+    }
+    
+    public void RevealSecret()
+    {
+        Console.WriteLine(PrivateField);
+        Console.WriteLine(ProtectedField);
     }
 }
 
