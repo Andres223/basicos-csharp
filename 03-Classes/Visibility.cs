@@ -5,11 +5,21 @@ partial class Program
     static void Visibility()
     {   
         Sith sith = new Sith();
-        sith.ShowProtected();
+        sith.PowerLevel = 4000;
+        sith.LightsaberColor = "red";
+        sith.UseForce();
     }
 }
 
-class Jedi
+interface IForceUser
+{
+    int PowerLevel { get; set; }
+    string LightsaberColor { get; set; }
+    
+    void UseForce();
+}
+
+class Jedi: IForceUser
 {
     public string PublicField = "Soy un Jedi y mi poder es conocido";
     private string PrivateField = "Mis pensamientos más profundos son privados";
@@ -39,8 +49,13 @@ class Jedi
     }
 }
 
-class Sith : Jedi
+class Sith : Jedi, IForceUser
 {
+    public new void UseForce()
+    {
+        Console.WriteLine($"Soy un Sith con un sable de luz {LightsaberColor} y mi nivel de poder es: {PowerLevel}");
+    }
+
     public void ShowProtected()
     {
         Console.WriteLine(ProtectedField);
