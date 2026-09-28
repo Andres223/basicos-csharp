@@ -16,22 +16,17 @@ partial class Program
             new MarvelCharacter { Name = "Stephen Strange", Alias = "Doctor Strange", Team = "Defenders" }
         };
 
-        // Conviertiendo a mayúsculas query
-        var uppercaseNamesQuery = from c in characters
-            select c.Name?.ToUpper();
-        // Conviertiendo a mayúsculas method
-        var uppercaseNamesMethod = characters.Select(c => c.Name?.ToUpper());
+        // Obtener los primeros tres por query
+        var firstThreeQuery =
+            (from c in characters select c).Take(3);
 
-        Console.WriteLine("Con query");
-        foreach (var name in uppercaseNamesQuery)
-        {
-            Console.WriteLine(name);
-        }
+        // Obtener los primeros tres por method
+        var firstThreeMethod = characters.Take(3);
 
-        Console.WriteLine("Con method");
-        foreach (var name in uppercaseNamesMethod)
+        Console.WriteLine("Obtener los primeros tres");
+        foreach (var character in firstThreeQuery)
         {
-            Console.WriteLine(name);
+            Console.WriteLine(character.Name);
         }
     }
 }
